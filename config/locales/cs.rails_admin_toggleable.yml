@@ -1,0 +1,12 @@
+cs:
+  admin:
+    actions:
+      toggle:
+        title: Přepnout
+    toggle:
+      enabled: '"%{attr}" povolen'
+      disabled: '"%{attr}" zakázán'
+      error: 'Chyba: %{err}'
+      no_id: Chybí ID
+      title_0: Zakázat
+      title_1: Povolit

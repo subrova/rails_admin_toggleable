@@ -27,9 +27,9 @@ module RailsAdmin
                 obj.send(method + '=', params[:on] == '1' ? true : false)
                 if obj.save
                   if params[:on] == '1'
-                    flash[:success] = I18n.t('admin.toggle.enabled', attr: method)
+                    flash[:success] = I18n.t('admin.toggle.enabled', attr: @abstract_model.model.send(:human_attribute_name, method))
                   else
-                    flash[:success] = I18n.t('admin.toggle.disabled', attr: method)
+                    flash[:success] = I18n.t('admin.toggle.disabled', attr: @abstract_model.model.send(:human_attribute_name, method))
                   end
 
                 else

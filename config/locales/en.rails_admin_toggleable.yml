@@ -2,9 +2,11 @@ en:
   admin:
     actions:
       toggle:
-        title: "Toggle"
+        title: Toggle
     toggle:
-      enabled: '"%{attr}" enabled'
-      disabled: '"%{attr}" disabled'
-      error: "Error: %{err}"
+      enabled: 'Attribute "%{attr}" was enabled'
+      disabled: 'Attribute "%{attr}" was disabled'
+      error: 'Error: %{err}'
       no_id: No ID provided
+      title_0: Disable
+      title_1: Enable

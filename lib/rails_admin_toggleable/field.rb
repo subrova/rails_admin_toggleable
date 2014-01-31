@@ -19,7 +19,8 @@ module RailsAdmin
                 fv.html_safe,
                 toggle_path(model_name: @abstract_model, id: bindings[:object].id, method: name, on: on.to_s),
                 method: :post,
-                class: 'badge ' + badge
+                class: 'badge ' + badge,
+                title: I18n.t("admin.toggle.title_#{on}")
               )
             end
 
