@@ -44,6 +44,10 @@ module RailsAdmin
           register_instance_option :help do
             ""
           end
+
+          def type
+            @type ||= :boolean
+          end
         end
       end
     end
