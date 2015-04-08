@@ -17,10 +17,10 @@ module RailsAdmin
             def g_link(fv, on, badge)
               bindings[:view].link_to(
                 fv.html_safe,
-                toggle_path(model_name: @abstract_model, id: bindings[:object].id, method: name, on: on.to_s),
+                toggle_path(model_name: abstract_model, id: bindings[:object].id, method: name, on: on.to_s),
                 method: :post,
                 class: 'badge ' + badge,
-                title: I18n.t("admin.toggle.title_#{on}")
+                title: I18n.t("admin.toggle.#{abstract_model.to_s.underscore}.#{name}_#{on}", default: I18n.t("admin.toggle.title_#{on}"))
               )
             end
 
